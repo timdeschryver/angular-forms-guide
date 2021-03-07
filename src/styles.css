@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 button {
-  @apply bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded;
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
 }
 
 label {
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  @applytext-5xl font-normal leading-normal mt-0 mb-2;
+  @apply text-5xl font-normal leading-normal mt-0 mb-2;
 }
 
 h3 {
@@ -50,18 +50,26 @@ h6 {
   @apply text-xl font-normal leading-normal mt-0 mb-2;
 }
 
-.checkbox-container {
+.checkbox-container,
+.radio-container {
   @apply flex items-center;
 }
 
-.checkbox-container > input {
+.checkbox-container > input,
+.radio-container > input {
   @apply h-4 w-4;
 }
 
-.checkbox-container > label {
+.checkbox-container > label,
+.radio-container > label {
   @apply ml-3 text-gray-700;
 }
 
 .help {
   @apply mt-1 ml-4 pl-3 block text-sm text-gray-600;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
