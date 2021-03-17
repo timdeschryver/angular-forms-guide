@@ -22,7 +22,7 @@ textarea.ng-invalid.ng-touched:not(:focus) {
   @apply border-red-500;
 }
 
-[requiredCheckboxList].ng-invalid.ng-touched input {
+[ng-reflect-required-checkbox-group].ng-invalid.ng-touched input {
   @apply border-red-500;
 }
 
@@ -66,10 +66,26 @@ h6 {
 }
 
 .help {
-  @apply mt-1 ml-4 pl-3 block text-sm text-gray-600;
+  @apply mt-1 block text-sm text-gray-600;
+}
+
+.help.error {
+  @apply text-red-600;
+}
+
+.help.info {
+  @apply text-blue-600;
 }
 
 pre {
   background: rgba(0, 0, 0, 0.1);
   padding: 10px;
+}
+
+fieldset {
+  @apply p-4 mb-12 border-2 border-gray-300;
+}
+
+legend {
+  @apply p-2;
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { InputTypesComponent } from './01-input-types/input-types.component';
+import { ValidationComponent } from './02-validation/validation.component';
 
 const routes: Routes = [
   {
@@ -8,8 +9,12 @@ const routes: Routes = [
     component: InputTypesComponent,
   },
   {
+    path: '02-validation',
+    component: ValidationComponent,
+  },
+  {
     path: '**',
-    redirectTo: '01-input-types',
+    redirectTo: '02-validation',
   },
 ];
 

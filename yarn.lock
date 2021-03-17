@@ -1504,20 +1504,20 @@
     lodash.merge "^4.6.2"
     lodash.uniq "^4.5.0"
 
-"@testing-library/angular@^10.3.2":
-  version "10.3.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-10.3.2.tgz#5ae47abc34c01e8fe12e1ebf7093ba21f886965e"
-  integrity sha512-XVIIO5wKKp2l0UEjwxBpQECnVahWzbLq1O3GoCCAaasQaFwLSnqXPaPZE4UWWM2ebZ9BnFeB9xetHpQup7AiPQ==
+"@testing-library/angular@^10.4.0":
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-10.4.0.tgz#ae2c6b197526b20ad5c7708dd2734a76f1306920"
+  integrity sha512-uP7zV8kt2IVIuVaP/QE1xPCrP195qlmhm5KagB3B66/BW5KA65e4GPDunR4IAyo1TvamBq+PUgG6zAwD/SAqtw==
   dependencies:
     "@phenomnomnominal/tsquery" "^4.1.1"
-    "@testing-library/dom" "^7.18.1"
+    "@testing-library/dom" "7.29.4"
     tslib "^2.0.0"
     tslint "^5.16.0"
 
-"@testing-library/dom@^7.18.1":
-  version "7.30.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.30.0.tgz#53697851f7708a1448cc30b74a2ea056dd709cd6"
-  integrity sha512-v4GzWtltaiDE0yRikLlcLAfEiiK8+ptu6OuuIebm9GdC2XlZTNDPGEfM2UkEtnH7hr9TRq2sivT5EA9P1Oy7bw==
+"@testing-library/dom@7.29.4":
+  version "7.29.4"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.29.4.tgz#1647c2b478789621ead7a50614ad81ab5ae5b86c"
+  integrity sha512-CtrJRiSYEfbtNGtEsd78mk1n1v2TUbeABlNIcOCJdDfkN5/JTOwQEbbQpoSRxGqzcWPgStMvJ4mNolSuBRv1NA==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/runtime" "^7.12.5"
