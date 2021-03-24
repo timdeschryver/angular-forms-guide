@@ -18,7 +18,10 @@ it('is valid when it has the same value as the comparison va', async () => {
   userEvent.type(input, 'value2');
   expect(model.controls.sut.invalid).toBeTruthy();
   expect(model.controls.sut.errors).toEqual({
-    equalTo: 'value1',
+    equalTo: {
+      name: undefined,
+      value: 'value1',
+    },
   });
 
   userEvent.clear(input);
@@ -42,7 +45,10 @@ it('revalidates on input change', async () => {
   userEvent.type(input, 'value2');
   expect(model.controls.sut.invalid).toBeTruthy();
   expect(model.controls.sut.errors).toEqual({
-    equalTo: 'value1',
+    equalTo: {
+      name: undefined,
+      value: 'value1',
+    },
   });
 
   component.fixture.componentInstance.compareValue = 'value2';

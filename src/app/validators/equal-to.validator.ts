@@ -1,4 +1,4 @@
-import { Input, Directive } from '@angular/core';
+import { Input, Directive, NgModule } from '@angular/core';
 import {
   ValidatorFn,
   AbstractControl,
@@ -6,12 +6,13 @@ import {
   NG_VALIDATORS,
   Validator,
 } from '@angular/forms';
+import { VALIDATION_MESSAGES } from './validation-messages';
 
-export function equalTo(value: any): ValidatorFn {
+export function equalTo(value: any, equalToName?: string): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     if (control.value !== value) {
       return {
-        equalTo: value,
+        equalTo: { value, name: equalToName },
       };
     }
 
@@ -43,11 +44,29 @@ export class EqualToValidatorDirective implements Validator {
     if (this._onChange) this._onChange();
   }
 
+  @Input() equalToName?: string;
+
   validate(control: AbstractControl): ValidationErrors | null {
-    return equalTo(this.equalTo)(control);
+    return equalTo(this.equalTo, this.equalToName)(control);
   }
 
   registerOnValidatorChange?(fn: () => void): void {
     this._onChange = fn;
   }
 }
+
+@NgModule({
+  declarations: [EqualToValidatorDirective],
+  exports: [EqualToValidatorDirective],
+  providers: [
+    {
+      provide: VALIDATION_MESSAGES,
+      useValue: {
+        equalTo: (details: any) =>
+          `This field must be equal to "${details.name || details.value}"`,
+      },
+      multi: true,
+    },
+  ],
+})
+export class EqualToValidatorModule {}
