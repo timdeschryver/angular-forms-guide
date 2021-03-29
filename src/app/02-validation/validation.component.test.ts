@@ -15,7 +15,6 @@ const provideMockedUsersService = () => ({
 it('name is required when checkbox is checked', async () => {
   await render(ValidationComponent, {
     imports: [ValidationModule],
-    excludeComponentDeclaration: true,
     providers: [provideMockedUsersService()],
   });
 
@@ -31,7 +30,6 @@ it('name is required when checkbox is checked', async () => {
 it('at least one checkbox must be checked to be valid', async () => {
   await render(ValidationComponent, {
     imports: [ValidationModule],
-    excludeComponentDeclaration: true,
     providers: [provideMockedUsersService()],
   });
 
@@ -50,7 +48,6 @@ it('at least one checkbox must be checked to be valid', async () => {
 it('passwords must match', async () => {
   await render(ValidationComponent, {
     imports: [ValidationModule],
-    excludeComponentDeclaration: true,
     providers: [provideMockedUsersService()],
   });
 
@@ -69,7 +66,6 @@ it('passwords must match', async () => {
 it('username must be unique', async () => {
   await render(ValidationComponent, {
     imports: [ValidationModule],
-    excludeComponentDeclaration: true,
     providers: [provideMockedUsersService()],
   });
 

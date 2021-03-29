@@ -1,12 +1,15 @@
 import { FormsModule, NgForm } from '@angular/forms';
 import { render, screen } from '@testing-library/angular';
 import userEvent from '@testing-library/user-event';
-import { EqualToValidatorDirective } from './equal-to.validator';
+import {
+  EqualToValidatorDirective,
+  EqualToValidatorModule,
+} from './equal-to.validator';
 
 it('is valid when it has the same value as the comparison va', async () => {
   const component = await render(EqualToValidatorDirective, {
     template: `<form><input [equalTo]='compareValue' ngModel name="sut" /></form>`,
-    imports: [FormsModule],
+    imports: [FormsModule, EqualToValidatorModule],
     componentProperties: {
       compareValue: 'value1',
     },
@@ -33,7 +36,7 @@ it('is valid when it has the same value as the comparison va', async () => {
 it('revalidates on input change', async () => {
   const component = await render(EqualToValidatorDirective, {
     template: `<form><input [equalTo]='compareValue' ngModel name="sut" /></form>`,
-    imports: [FormsModule],
+    imports: [FormsModule, EqualToValidatorModule],
     componentProperties: {
       compareValue: 'value1',
     },

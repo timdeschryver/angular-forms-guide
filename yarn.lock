@@ -1504,10 +1504,10 @@
     lodash.merge "^4.6.2"
     lodash.uniq "^4.5.0"
 
-"@testing-library/angular@^10.4.0":
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-10.4.0.tgz#ae2c6b197526b20ad5c7708dd2734a76f1306920"
-  integrity sha512-uP7zV8kt2IVIuVaP/QE1xPCrP195qlmhm5KagB3B66/BW5KA65e4GPDunR4IAyo1TvamBq+PUgG6zAwD/SAqtw==
+"@testing-library/angular@^10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-10.5.0.tgz#c12883586dd964230dd761fcaeb3e77cdcc90053"
+  integrity sha512-DpdACVT2D6iKbOisGw3OFNTntAYbOm43CPmMDL8GdqP1PQKJccvfP+VNwYS4GkjC5/dxxEbQAlDzoYw+v3wsNg==
   dependencies:
     "@phenomnomnominal/tsquery" "^4.1.1"
     "@testing-library/dom" "7.29.4"

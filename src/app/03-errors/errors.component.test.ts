@@ -12,7 +12,6 @@ import { ErrorsComponent, ErrorsModule } from './errors.component';
 it('shows all error messages', async () => {
   await render(ErrorsComponent, {
     imports: [ErrorsModule],
-    excludeComponentDeclaration: true,
   });
 
   const submitForm = () =>
@@ -35,7 +34,6 @@ it('shows all error messages', async () => {
 it('email', async () => {
   await render(ErrorsComponent, {
     imports: [ErrorsModule],
-    excludeComponentDeclaration: true,
   });
 
   const emailField = within(screen.getByTestId('email-field'));

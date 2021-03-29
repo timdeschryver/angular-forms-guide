@@ -12,7 +12,6 @@ it('builds up the form model', async () => {
       submitEmitter,
     },
     imports: [InputTypesModule],
-    excludeComponentDeclaration: true,
   });
 
   userEvent.type(screen.getByRole('textbox', { name: /text/i }), 'Some text');
