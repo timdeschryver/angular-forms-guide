@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { InputTypesModule } from './01-input-types/input-types.component';
 import { ValidationModule } from './02-validation/validation.component';
 import { ErrorsModule } from './03-errors/errors.component';
+import { DynamicModule } from './04-dynamic/dynamic.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { ErrorsModule } from './03-errors/errors.component';
     InputTypesModule,
     ValidationModule,
     ErrorsModule,
+    DynamicModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

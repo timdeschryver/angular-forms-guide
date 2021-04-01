@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { InputTypesComponent } from './01-input-types/input-types.component';
 import { ValidationComponent } from './02-validation/validation.component';
 import { ErrorsComponent } from './03-errors/errors.component';
+import {
+  DynamicComponentFlat,
+  DynamicComponentGrouped,
+} from './04-dynamic/dynamic.component';
 
 const routes: Routes = [
   {
@@ -18,8 +22,13 @@ const routes: Routes = [
     component: ErrorsComponent,
   },
   {
+    path: '04-dynamic',
+    component: DynamicComponentGrouped,
+    // component: DynamicComponentFlat,
+  },
+  {
     path: '**',
-    redirectTo: '03-errors',
+    redirectTo: '04-dynamic',
   },
 ];
 
