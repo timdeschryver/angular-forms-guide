@@ -7,6 +7,7 @@ import {
   DynamicComponentFlat,
   DynamicComponentGrouped,
 } from './04-dynamic/dynamic.component';
+import { TeamComponent } from './05-sub-form-components/team.component';
 
 const routes: Routes = [
   {
@@ -27,8 +28,12 @@ const routes: Routes = [
     // component: DynamicComponentFlat,
   },
   {
+    path: '05-components',
+    component: TeamComponent,
+  },
+  {
     path: '**',
-    redirectTo: '04-dynamic',
+    redirectTo: '05-components',
   },
 ];
 

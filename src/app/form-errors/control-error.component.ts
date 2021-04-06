@@ -4,10 +4,11 @@ import { AbstractControl, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-control-error',
   template: `
+    <!-- use 'control.invalid' because the error should also not be visible in the 'pending' state -->
     <div
       role="alert"
       class="mt-1 text-sm text-red-600"
-      [hidden]="control.valid || !(control.touched || form?.submitted)"
+      [hidden]="!control.invalid || !(control.touched || form?.submitted)"
     >
       {{ control.errors | validate }}
     </div>

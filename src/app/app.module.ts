@@ -7,6 +7,7 @@ import { InputTypesModule } from './01-input-types/input-types.component';
 import { ValidationModule } from './02-validation/validation.component';
 import { ErrorsModule } from './03-errors/errors.component';
 import { DynamicModule } from './04-dynamic/dynamic.component';
+import { SubFormComponentsModule } from './05-sub-form-components/team.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { DynamicModule } from './04-dynamic/dynamic.component';
     ValidationModule,
     ErrorsModule,
     DynamicModule,
+    SubFormComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

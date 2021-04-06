@@ -373,9 +373,6 @@ export class DynamicComponentGrouped {
 
       <div class="flex space-x-4">
         <div class="flex-1">
-          <h2>Form States</h2>
-        </div>
-        <div class="flex-1">
           <h2>Form Value</h2>
           <pre>{{ form.form.value | json }}</pre>
         </div>
