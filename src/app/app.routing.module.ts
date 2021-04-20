@@ -8,6 +8,7 @@ import {
   DynamicComponentGrouped,
 } from './04-dynamic/dynamic.component';
 import { TeamComponent } from './05-sub-form-components/team.component';
+import { WizardComponent } from './06-wizard/wizard.component';
 
 const routes: Routes = [
   {
@@ -28,12 +29,16 @@ const routes: Routes = [
     // component: DynamicComponentFlat,
   },
   {
-    path: '05-components',
+    path: '05-sub-form-components',
     component: TeamComponent,
   },
   {
+    path: '06-wizard',
+    component: WizardComponent,
+  },
+  {
     path: '**',
-    redirectTo: '05-components',
+    redirectTo: '06-wizard',
   },
 ];
 

@@ -3,21 +3,11 @@ import { NgModule } from '@angular/core';
 import { ControlErrorComponent } from './control-error.component';
 import { ErrorDirective } from './error.directive';
 import { FormFieldDirective } from './form-field.directive';
-import { ValidatePipe } from './validate.pipe';
+import { ValidateModule } from '../validate';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [
-    FormFieldDirective,
-    ErrorDirective,
-    ControlErrorComponent,
-    ValidatePipe,
-  ],
-  exports: [
-    FormFieldDirective,
-    ErrorDirective,
-    ControlErrorComponent,
-    ValidatePipe,
-  ],
+  imports: [CommonModule, ValidateModule],
+  declarations: [FormFieldDirective, ErrorDirective, ControlErrorComponent],
+  exports: [FormFieldDirective, ErrorDirective, ControlErrorComponent],
 })
 export class FormErrorsModule {}

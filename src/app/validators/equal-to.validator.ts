@@ -6,7 +6,7 @@ import {
   NG_VALIDATORS,
   Validator,
 } from '@angular/forms';
-import { VALIDATION_MESSAGES } from './validation-messages';
+import { VALIDATION_MESSAGES } from '../validate/validation-messages';
 
 export function equalTo(value: any, equalToName?: string): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {

@@ -1,3 +1,4 @@
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -98,6 +99,12 @@ import { FormsModule, NgForm } from '@angular/forms';
     </form>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { showError: true },
+    },
+  ],
 })
 export class InputTypesComponent {
   @Output() submitEmitter = new EventEmitter<FormModel>();

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { EqualToValidatorModule } from './equal-to.validator';
-import { RequiredCheckboxGroupValidatorModule } from './required-checkbox-group.validator';
-import { VALIDATION_MESSAGES } from '../validate/validation-messages';
+import { ValidatePipe } from './validate.pipe';
+import { VALIDATION_MESSAGES } from './validation-messages';
 
 @NgModule({
-  imports: [RequiredCheckboxGroupValidatorModule, EqualToValidatorModule],
-  exports: [RequiredCheckboxGroupValidatorModule, EqualToValidatorModule],
+  declarations: [ValidatePipe],
+  exports: [ValidatePipe],
   providers: [
     {
       provide: VALIDATION_MESSAGES,
@@ -21,4 +20,4 @@ import { VALIDATION_MESSAGES } from '../validate/validation-messages';
     },
   ],
 })
-export class ValidatorModule {}
+export class ValidateModule {}

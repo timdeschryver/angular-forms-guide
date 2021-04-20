@@ -1,9 +1,6 @@
 import { Pipe, PipeTransform, Inject } from '@angular/core';
 import { ValidationErrors } from '@angular/forms';
-import {
-  ValidationMessages,
-  VALIDATION_MESSAGES,
-} from '../validators/validation-messages';
+import { ValidationMessages, VALIDATION_MESSAGES } from './validation-messages';
 
 @Pipe({ name: 'validate' })
 export class ValidatePipe implements PipeTransform {

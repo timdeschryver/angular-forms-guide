@@ -6,7 +6,7 @@ import {
   NG_VALIDATORS,
   Validator,
 } from '@angular/forms';
-import { VALIDATION_MESSAGES } from './validation-messages';
+import { VALIDATION_MESSAGES } from '../validate/validation-messages';
 
 function requiredCheckboxGroup(
   requiredCheckboxes: number,

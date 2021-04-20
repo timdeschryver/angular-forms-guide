@@ -8,6 +8,7 @@ import { ValidationModule } from './02-validation/validation.component';
 import { ErrorsModule } from './03-errors/errors.component';
 import { DynamicModule } from './04-dynamic/dynamic.component';
 import { SubFormComponentsModule } from './05-sub-form-components/team.component';
+import { WizardModule } from './06-wizard/wizard.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { SubFormComponentsModule } from './05-sub-form-components/team.component
     ErrorsModule,
     DynamicModule,
     SubFormComponentsModule,
+    WizardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

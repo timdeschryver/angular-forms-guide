@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 h1 {
   @apply text-6xl font-normal leading-normal mt-0 mb-2;
@@ -36,7 +37,8 @@ label {
 
 input:not([type="checkbox"], [type="radio"]),
 select,
-textarea {
+textarea,
+mat-form-field {
   @apply flex-1 block w-full;
 }
 
@@ -84,4 +86,10 @@ fieldset {
 
 legend {
   @apply p-2;
+}
+
+mat-form-field input,
+mat-form-field textarea {
+  box-shadow: none !important;
+  border: none !important;
 }
